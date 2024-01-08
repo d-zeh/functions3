@@ -170,7 +170,11 @@ let foods = [
 */
 
 // CODE HERE
-
+riceIncluded = foods.filter(item => {
+  return item.tags.includes("rice")
+}).reduce((acc, curr) => {
+  return acc + curr.price
+},0)
 
 // THE TOTAL
-
+console.log(riceIncluded)
