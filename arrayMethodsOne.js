@@ -2,6 +2,14 @@
     You can check your answers in this file
     by console.logging the variables that are 
     storing the results of your function calls.
+
+git remote add origin https://github.com/d-zeh/functions3.git
+git branch -M main
+git push -u origin main
+
+
+
+
 */
 
 ////////// PROBLEM 1 //////////
@@ -60,8 +68,8 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-// const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
-
+const totalPopulation = populations.reduce((acc, curr) => acc + curr)
+// console.log(totalPopulation)
 
 
 ////////// PROBLEM 4 //////////
@@ -85,7 +93,8 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-// const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+const myStrongest = monstersInYourPocket.filter(pokemon=> pokemon.CP >= 200);
+console.log(myStrongest)
 
 
 
@@ -103,7 +112,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 */
 
 // CODE HERE
-
+const orderTotals = orders.map(order => order.price + (order.price * order.tax))
 
 
 ////////// PROBLEM 6 //////////
@@ -123,3 +132,6 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+const total = purchases
+              .filter(purchase => purchase.owner === 'Bob')
+              .reduce((acc, curr) => acc + curr.price)
