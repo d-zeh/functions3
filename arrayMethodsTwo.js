@@ -10,7 +10,7 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
-
+numbers.forEach(num => console.log(num/2))
 
 ////////// PROBLEM 2 //////////
 
@@ -23,7 +23,8 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
-
+let newNum = numbers.map(num => num/2)
+console.log(newNum)
 
 ////////// PROBLEM 3 //////////
 
@@ -51,6 +52,16 @@ let cities = [
 
 // CODE HERE
 
+let Icities = cities.filter(name => {
+for (let i = 0; i < cities.length; i++) {
+  if('i' === name[name.length-1]){
+    return true
+  }
+}
+}
+)
+
+console.log(Icities)
 
 ////////// PROBLEM 4 //////////
 
@@ -86,7 +97,21 @@ let fruits = [
 */
 
 // CODE HERE
-
+fruits.forEach((item) => {
+  if (item.color === "red") {
+    return console.log(
+      `The fruit with index ${fruits.indexOf(item)} is an apple`
+    );
+  } else if (item.color === "orange") {
+    return console.log(
+      `The fruit with index ${fruits.indexOf(item)} is an orange`
+    );
+  } else {
+    return console.log(
+      `The fruit with index ${fruits.indexOf(item)} is neither apple or orange`
+    );
+  }
+});
 
 
 /* 
